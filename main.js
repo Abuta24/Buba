@@ -191,10 +191,3 @@ function totalCharacters(arr) {
 }
 
 totalCharacters(["apple", "banana", "cherry", "date"]);
-
-let array = [
-  { name: "date", age: 17, city: "tbilisi" },
-  { name: "sandro", age: 20, city: "soxumi" },
-  { name: "nika", age: 21, city: "kaxeti" },
-  { name: "gio", age: 30, city: "tusheti" },
-];
