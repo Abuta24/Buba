@@ -116,7 +116,85 @@ switch (true) {
     grade = "Student Failed";
     break;
   default:
-    grade = "Invalid Marks"
+    grade = "Invalid Marks";
 }
 
-console.log(grade)
+console.log(grade);
+
+function removeDuplicates(arr) {
+  let newarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!newarr.includes(arr[i])) {
+      newarr.push(arr[i]);
+    }
+  }
+  console.log(newarr);
+}
+
+removeDuplicates([1, 1, 2, 3, 3, 4, 4, 5, 6, 7, 7, 7, 8, 9]);
+
+function removeDuplicates(arr) {
+  let newarr = new Set(arr);
+  let finalarr = Array.from(newarr);
+  console.log(finalarr);
+}
+
+removeDuplicates([1, 1, 2, 3, 3, 4, 4, 5, 6, 7, 7, 7, 8, 9]);
+
+function countNameFrequency(arr) {
+  let newarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let name = arr[i];
+    if (newarr[name]) {
+      newarr[name]++;
+    } else {
+      newarr[name] = 1;
+    }
+  }
+  console.log(newarr);
+}
+
+countNameFrequency(["Alice", "Bob", "Charlie", "David", "Alice", "Eve"]);
+
+function getUniqueWords(arr) {
+  let splitted = arr.split(" ");
+  let newarr = new Set(splitted);
+  let finalarr = Array.from(newarr);
+
+  console.log(finalarr);
+}
+
+getUniqueWords("This is a sample sentence with repeated words in it");
+
+function uniqueSortedItems(arr) {
+  let newarr = new Set(arr);
+  let finalarr = Array.from(newarr);
+
+  console.log(finalarr.sort());
+}
+
+uniqueSortedItems(["banana", "apple", "orange", "apple", "grape", "banana"]);
+
+function doubleNumbers(arr) {
+  let newarr = arr.map((el) => el * 2);
+  console.log(newarr);
+}
+
+doubleNumbers([10, 20, 30, 40, 50]);
+
+function totalCharacters(arr) {
+  count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    count += arr[i].length;
+  }
+  console.log(count);
+}
+
+totalCharacters(["apple", "banana", "cherry", "date"]);
+
+let array = [
+  { name: "date", age: 17, city: "tbilisi" },
+  { name: "sandro", age: 20, city: "soxumi" },
+  { name: "nika", age: 21, city: "kaxeti" },
+  { name: "gio", age: 30, city: "tusheti" },
+];
